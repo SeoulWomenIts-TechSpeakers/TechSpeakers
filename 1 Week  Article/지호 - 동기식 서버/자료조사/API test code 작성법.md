@@ -6,6 +6,17 @@
   - `HttpMessageNotReadableException` Cannot deserialize instance of com.example.springboot.controller.dto.reserv.ResrvHistRequestDto out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException
 - [원인]
   - MappingJackson2HttpMessageConverter는 JsonParsingException할 때 발생하는 에러
+- [해결방법]
+  - Body에 JSON 형태로 변환하는 메서드를 써주고, Object가 아닌 Json형태로 값을 전달함
+  ```javascript
+  const response = await fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify({
+          hnum: props.host.hnum,
+          reqPpl: option,
+    }),
+  ```
 
 #### API TEST CODE 로 에러 상황 분석
 
