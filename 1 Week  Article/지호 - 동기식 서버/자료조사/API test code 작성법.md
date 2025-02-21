@@ -1,8 +1,9 @@
-### ❓API 연결 통신 오류
+### 🙋‍♀️ API 연결 통신 오류
 
 ![Image](https://github.com/user-attachments/assets/5f2fc089-ecbc-4114-a897-1df6e471e18e)
 
-- [서버 에러 문구] `HttpMessageNotReadableException` Cannot deserialize instance of com.example.springboot.controller.dto.reserv.ResrvHistRequestDto out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException
+- [서버 에러 문구]
+  - `HttpMessageNotReadableException` Cannot deserialize instance of com.example.springboot.controller.dto.reserv.ResrvHistRequestDto out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException
 - [원인]
   - MappingJackson2HttpMessageConverter는 JsonParsingException할 때 발생하는 에러
 
@@ -34,7 +35,7 @@ public void createUserTest() throws Exception {
     String json = new ObjectMapper().writeValueAsString(histRequestDto);
     mockMvc.perform(
             MockMvcRequestBuilders.post("http://localhost:8080/api/resrv/save")
-                    .content(MediaType.APPLICATION_JSON_VALUE)
+                    .content(MediaType.APPLICATION_JSON)
                     .content(json)
             ).andExpect(
                     MockMvcResultMatchers.status().isOk()
@@ -47,25 +48,16 @@ public void createUserTest() throws Exception {
 }
 ```
 
-#### 테스트 코드 에러 문구
+##### 테스트 코드 에러 문구
 
 ```
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /api/resrv/save
-       Parameters = {}
-          Headers = []
-             Body = {"hnum":"1","userid":"2c9deba995259d2b0195259d3be10000","reqPpl":2,"startDate":null,"endDate":null}
-    Session Attrs = {}
-
-Handler:
-           Type = com.example.springboot.controller.ResrvApiController
-           Method = public void com.example.springboot.controller.ResrvApiController.requestResrv(java.security.Principal,com.example.springboot.controller.dto.reserv.ResrvHistRequestDto) throws java.lang.Exception
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = org.springframework.web.HttpMediaTypeNotSupportedException
+ null pointer exception
 ```
+
+- 해당 경우는 Principal 객체가 없어서 발생하는 예
+- 서버 상에는 핸들러 매퍼가 값을 잘 매칭해서 가져오는 것을 확인할 수 있음
+
+  <br>  
+  <br>
+
+### ❓여전히 풀리지 않는 질문들
