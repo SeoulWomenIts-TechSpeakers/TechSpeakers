@@ -51,8 +51,10 @@
 
 #### 김지호 : "대용량 트래픽 서버를 Kafka/Redis로 만들며 배운 것들"
 
+<div style="display: flex; gap: 10px; align-items: center;">
   <img src="https://file.notion.so/f/f/87da3d2b-8cb8-4912-ae5e-89921a016dfb/71ff14a1-14c1-444a-b0d1-8460f713e803/%EB%B0%9C%ED%91%9C%EC%82%AC%EC%A7%841.jpg?table=block&id=1d3d3994-4fb9-80f4-870b-f9aa76ce67a4&spaceId=87da3d2b-8cb8-4912-ae5e-89921a016dfb&expirationTimestamp=1744545600000&signature=a3FYiv3Tv0_hQ0LFMcF6qgFYatP3B6LqPlEaLwvCA5c&downloadName=%EB%B0%9C%ED%91%9C%EC%82%AC%EC%A7%841.jpg" width="250" height="200"/>
-     <img src="20250414_220903.png" width="" height="200"/>
+     <img src="20250414_220903.png" width="250" height="200"/>
+     </div>
 
 - 아티클 : https://medium.com/@rlawlgh3245
 - 발표 영상 : https://youtu.be/MjZrEpEDZkI
@@ -75,8 +77,10 @@
 
 #### 유정현 : "안드로이드 오디오 프레임워크 구조와 동작 원리"
 
+<div style="display: flex; gap: 10px; align-items: center;">
   <img src="https://file.notion.so/f/f/87da3d2b-8cb8-4912-ae5e-89921a016dfb/2b6fa1c5-dd3a-4f7e-aff2-b01670369150/image.png?table=block&id=1d4d3994-4fb9-801e-a56c-fc6f2a0b93c0&spaceId=87da3d2b-8cb8-4912-ae5e-89921a016dfb&expirationTimestamp=1744545600000&signature=--pjte6pPwAoOkyAqGAbiNHy47Q2YfUSdCjFW0lgW54&downloadName=image.png" width="250" height="200"/>
-   <img src="20250414_220833.png" width="" height="200"/>
+  <img src="20250414_220833.png" width="250" height="200"/>
+</div>
    
 - 아티클 : https://medium.com/@jeohyoo1229
 - 발표영상 : https://youtu.be/zTK5GTGEMg0
